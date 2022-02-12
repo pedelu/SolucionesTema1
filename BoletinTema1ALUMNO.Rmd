@@ -175,7 +175,8 @@ car::qqPlot(log(animals$brain))
 #a
     libReturn <- library()
     str(libReturn)
-
+#b
+    head(libReturn$results, n = 5)
 
 
 
