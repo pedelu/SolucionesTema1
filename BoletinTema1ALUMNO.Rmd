@@ -114,8 +114,12 @@ head(as.matrix(animals))
 tail(as.matrix(animals))
 str(animals)
 
+#c
+rownames(mammals)
+colnames(mammals)
 
-
+rownames(animals)
+colnames(animals)
 
 ```
 
