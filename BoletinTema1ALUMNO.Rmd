@@ -100,16 +100,19 @@ library(robustbase)
 help("mammals")
 help("Animals2")
 
+#b
+mammals <- MASS::mammals
+animals <- robustbase::Animals2
 
+dim(mammals)
+head(as.matrix(mammals))
+tail(as.matrix(mammals))
+str(mammals)
 
-
-
-
-
-
-
-
-
+dim(animals)
+head(as.matrix(animals))
+tail(as.matrix(animals))
+str(animals)
 
 
 
