@@ -133,10 +133,10 @@ e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. �
 
 ```{r}
 
-
-
-
-
+setdiff(rownames(mammals),commonAnimals)
+setdiff(rownames(animals),commonAnimals)
+length(setdiff(rownames(animals),commonAnimals)) + length(setdiff(rownames(mammals),commonAnimals))
+#Son animales extintos o de los polos
 
 ```
 
