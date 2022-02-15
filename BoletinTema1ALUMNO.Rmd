@@ -282,19 +282,17 @@ plot(cabbages$HeadWt, cabbages$VitC)
 Model1 <- lm(VitC ~ HeadWt, data = cabbages)
 abline(Model1)
 
+#b
+plot(cabbages$HeadWt, cabbages$VitC)
 
-
-
-
-
-
-
-
-
-
-
-
-
+plot(cabbages$HeadWt, cabbages$VitC, pch=c(6,16)[cabbages$Cult])
+legend(x="topright",legend=c("c39","c52"), pch=c(6,16))
+# Planteamos 2 modelos lineales, uno para los datos de cada factor
+Model1 <- lm(VitC ~ HeadWt, data = cabbages, subset = which(Cult == "c39"))
+Model2 <- lm(VitC ~ HeadWt, data = cabbages, subset = which(Cult == "c52"))
+# Representamos las rectas correspondientes a cada modelo lineal
+abline(Model1, lty=2)
+abline(Model2)
 ```
 
 c.  Usa **summary** con cada uno de los modelos obtenidos y observa **Coefficients**. Dado que hemos planteado un modelo $y=mx+n$, donde $y=VitC$ y $x=HeadWt$. La función **lm** nos permite obtener **(Intercept)**; **n** y la pendiente **HeadWt**; **m** (además de otros parámetros adicionales que evalúan la caracterísiticas del modelo). Observa que en todos los casos, la pendiene es negativa indicando que las calabazas de más peso contienen menos vitamina C. No te preocupes por el resto de parámetros del modelo, por el momento.
