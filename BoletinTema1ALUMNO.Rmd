@@ -227,10 +227,10 @@ car::qqPlot(log(animals$brain))
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
 
 ```{r}
-
-
-
-
+library(MASS)
+data("cabbages")
+car::qqPlot(cabbages$HeadWt)
+car::qqPlot(cabbages$VitC)
 
 ```
 
