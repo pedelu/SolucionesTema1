@@ -190,8 +190,8 @@ data("cabbages")
 dim(cabbages)
 str(cabbages)
 
-
-
+#b
+colSums(is.na(cabbages)*1)
 
 
 
