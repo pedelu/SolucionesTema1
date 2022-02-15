@@ -193,9 +193,12 @@ str(cabbages)
 #b
 colSums(is.na(cabbages)*1)
 
-
-
-
+#c
+library(car)
+data("Chile")
+dim(Chile)
+str(Chile)
+colSums(is.na(Chile)*1)
 
 
 
